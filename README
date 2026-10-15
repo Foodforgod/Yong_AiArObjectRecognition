@@ -85,7 +85,7 @@ Upload your files to your HTTPS-enabled domain or cPanel hosting.
 Open [https://your-domain.com/ai-ar/settings.php](https://your-domain.com/ai-ar/settings.php).
 
 Scroll down to the Open Scanner on Smartphone section to reveal the automatically generated QR code.
-![App Preview](assets/images/scanner-preview.png)
+
 Scan the QR code using your phone's default camera app to open the live scanner!
 
 Option B: Testing Locally on Same Wi-Fi (Using Ngrok for HTTPS)
@@ -100,7 +100,7 @@ ngrok http 80
 Copy the secure HTTPS URL provided by Ngrok (e.g., [https://xxxx.ngrok-free.app/ai-ar-object-recognition/](https://xxxx.ngrok-free.app/ai-ar-object-recognition/)) and open it on your phone.
 
 📸 Step 5: Using the AR Scanner
-![App Preview](assets/images/image-1.png)
+
 Camera Permission: When prompted on your phone, tap Allow to grant camera permission.
 
 Focus: Tap anywhere on the live camera preview to trigger Tap-to-Focus with the animated reticle.
@@ -108,7 +108,7 @@ Focus: Tap anywhere on the live camera preview to trigger Tap-to-Focus with the 
 Flashlight: Tap the Flashlight icon (⚡) in the top menu to toggle torch light in dark areas.
 
 Switch Camera: Tap the Camera Switch icon (🔄) to cycle between back, front, and wide lenses.
-![App Preview](assets/images/image-2.png)
+
 Scan Object: Point your camera at an object and press the large blue Scan Button.
 
 Results & AR Overlay:
