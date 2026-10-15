@@ -1,0 +1,121 @@
+🚀 Step-by-Step Guide & README
+This guide covers everything from zero installation to running your live AI + AR Smart Object Recognition System on your smartphone.
+
+📋 Prerequisites
+Before starting, make sure you have:
+
+PHP 8.3 or higher with the curl extension enabled.
+
+A local web server such as XAMPP, WAMP, Laragon, or a live hosting server (cPanel / VPS).
+
+A Google AI Studio API Key (Free).
+
+🛠️ Step 1: Download & Folder Setup
+Copy the project files into your web server root directory:
+
+For XAMPP (Windows): C:\xampp\htdocs\ai-ar-object-recognition\
+
+For cPanel Hosting: public_html/ai-ar/
+
+Ensure your directory structure matches the following layout:
+
+Plaintext
+ai-ar-object-recognition/
+├── index.php
+├── settings.php
+├── README.md
+├── api/
+│   ├── recognize.php
+│   └── settings.php
+├── config/
+│   ├── config.example.php
+│   └── config.php
+├── includes/
+│   ├── AppConfig.php
+│   ├── AIProvider.php
+│   ├── GeminiVision.php
+│   ├── AgnesVision.php
+│   └── ImageValidator.php
+└── assets/
+    ├── css/
+    │   └── app.css
+    └── js/
+        ├── camera.js
+        ├── voice.js
+        ├── haptic.js
+        ├── ar-overlay.js
+        ├── scanner.js
+        └── settings.js
+🔑 Step 2: Get Your Free Gemini API Key
+Go to Google AI Studio.
+
+Log in with your Google account.
+
+Click on "Get API key" and select "Create API key".
+
+Copy your new API key string.
+
+⚙️ Step 3: System Configuration
+Open your browser and navigate to the settings page:
+
+Local: http://localhost/ai-ar-object-recognition/settings.php
+
+Scroll to the AI Provider & API Keys section.
+
+Paste your key into the Gemini API Key input field.
+
+Set the Gemini Model to:
+
+Plaintext
+gemini-3.8-flash
+In the Voice Narration Settings section:
+
+Choose your preferred country voice accent (e.g., 🇲🇾 Malaysia, 🇯🇵 Japan, 🇺🇸 US, 🇬🇧 UK).
+
+Adjust the volume slider and click Test Voice to verify audio output.
+
+Click Save All Settings.
+
+📱 Step 4: Connecting via Smartphone (HTTPS Requirement)
+⚠️ Important: Modern smartphone web browsers require a secure connection (HTTPS) to allow web pages to access camera hardware (navigator.mediaDevices.getUserMedia).
+
+Option A: Hosting on Live Server (Recommended)
+Upload your files to your HTTPS-enabled domain or cPanel hosting.
+
+Open [https://your-domain.com/ai-ar/settings.php](https://your-domain.com/ai-ar/settings.php).
+
+Scroll down to the Open Scanner on Smartphone section to reveal the automatically generated QR code.
+
+Scan the QR code using your phone's default camera app to open the live scanner!
+
+Option B: Testing Locally on Same Wi-Fi (Using Ngrok for HTTPS)
+If running XAMPP on your computer:
+
+Download and run Ngrok.
+
+Expose your local server port by running:
+
+Bash
+ngrok http 80
+Copy the secure HTTPS URL provided by Ngrok (e.g., [https://xxxx.ngrok-free.app/ai-ar-object-recognition/](https://xxxx.ngrok-free.app/ai-ar-object-recognition/)) and open it on your phone.
+
+📸 Step 5: Using the AR Scanner
+Camera Permission: When prompted on your phone, tap Allow to grant camera permission.
+
+Focus: Tap anywhere on the live camera preview to trigger Tap-to-Focus with the animated reticle.
+
+Flashlight: Tap the Flashlight icon (⚡) in the top menu to toggle torch light in dark areas.
+
+Switch Camera: Tap the Camera Switch icon (🔄) to cycle between back, front, and wide lenses.
+
+Scan Object: Point your camera at an object and press the large blue Scan Button.
+
+Results & AR Overlay:
+
+The system captures and compresses the image frame.
+
+AI identifies the object and draws an AR Bounding Box over it.
+
+The Product Card pops up displaying the product name, specs, and description.
+
+The system automatically reads aloud the result in your selected voice!
